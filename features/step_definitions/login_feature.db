@@ -1,0 +1,32 @@
+#require "selenium-webdriver"
+
+#driver = Selenium::WebDriver.for :chrome
+#driver.manage.window.maximize()
+
+Given(/^I am on the index page$/) do
+  visit('http://localhost:3000')
+  #driver.get('http://localhost:3000')
+end
+
+When (/^I fill the login field$/) do
+  #driver.find_element(cssSelector("#login"))
+  #fill_in '#login', :with => '12345'
+  #driver.find_element(:submit_tag, 'Entrar').click()	
+  #driver.find_element(:login, 'Login').send_keys("teste")
+end
+
+And (/^I fill the password field$/)  do
+  fill_in 'Senha', :with => '12345678'
+end
+
+When(/^I click in the button 'Entrar'$/) do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Then(/^So i logged in$/) do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+
+
+

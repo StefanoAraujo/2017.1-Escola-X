@@ -9,5 +9,4 @@ Feature: Login
 			And I fill in "Login" with "12345"
 			And I fill in "Senha" with "12345678"
 			When I press "Entrar" button
-			Then I will go to next page
 			

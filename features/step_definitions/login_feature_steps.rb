@@ -21,8 +21,5 @@ end
 When (/^I press "Entrar" button$/) do
 	entrar = driver.find_element(:name, 'commit')
 	entrar.click
-end
-
-Then (/^I will go to next page$/) do
-	driver.navigate().to('http://localhost:3000/users');
+	driver.quit
 end

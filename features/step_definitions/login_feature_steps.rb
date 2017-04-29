@@ -8,9 +8,9 @@ Given (/^I am on the log in page$/) do
 	driver.get('http://localhost:3000/')
 end
 
-And (/^I fill in "Login" with "12345"$/) do
+And (/^I fill in "Login" with "123456"$/) do
 	login = driver.find_element(:name, 'login')
-	login.send_keys "12345"
+	login.send_keys "123456"
 end
 
 And (/^I fill in "Senha" with "12345678"$/) do
@@ -21,5 +21,8 @@ end
 When (/^I press "Entrar" button$/) do
 	entrar = driver.find_element(:name, 'commit')
 	entrar.click
-	driver.quit
+end
+
+Then (/^I login$/) do
+	driver.get('http://localhost:3000/users')
 end

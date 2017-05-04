@@ -42,12 +42,14 @@ gem 'font-awesome-rails'
 gem 'carrierwave', '~> 0.10.0'
 gem 'mini_magick', '~> 4.3'
 
+gem 'pg', '0.18.4'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
+  # gem 'pg', '0.18.4'
   gem 'rails-controller-testing'
   gem 'rspec-rails', '>= 3.5.0'
   gem 'byebug', platform: :mri
